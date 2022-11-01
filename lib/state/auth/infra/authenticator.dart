@@ -1,7 +1,4 @@
-import 'dart:html';
-
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:socialio/state/auth/constants/constants.dart';
@@ -9,6 +6,7 @@ import 'package:socialio/state/auth/models/auth_result.dart';
 import 'package:socialio/state/posts/type_defs/user_id.dart';
 
 class Authenticator {
+  const Authenticator();
   UserId? get userId => FirebaseAuth.instance.currentUser?.uid;
   bool get isAlreadyLoggedIn => userId != null;
   String? get displayName => FirebaseAuth.instance.currentUser?.displayName;
@@ -20,7 +18,7 @@ class Authenticator {
     await FacebookAuth.instance.logOut();
   }
 
-  Future<AuthResult> logginWithFacebook() async {
+  Future<AuthResult> loginWithFacebook() async {
     final loginResult = await FacebookAuth.instance.login();
     final token = loginResult.accessToken?.token;
     if (token == null) {
@@ -43,7 +41,7 @@ class Authenticator {
           email,
         );
         if (providers.contains(Constants.googleCom)) {
-          await logginWithGoogle();
+          await loginWithGoogle();
           FirebaseAuth.instance.currentUser?.linkWithCredential(
             credential,
           );
@@ -54,7 +52,7 @@ class Authenticator {
     }
   }
 
-  Future<AuthResult> logginWithGoogle() async {
+  Future<AuthResult> loginWithGoogle() async {
     final GoogleSignIn googleSignIn = GoogleSignIn(scopes: [
       Constants.emailScope,
     ]);

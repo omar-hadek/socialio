@@ -1,6 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:socialio/firebase_options.dart';
+import 'dart:developer' as devtools show log;
+
+import 'package:socialio/state/auth/infra/authenticator.dart';
+
+extension Log on Object {
+  void log() => devtools.log(toString());
+}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,22 +23,45 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Socialio',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
-        indicatorColor: Colors.blueGrey,
+        title: 'Socialio',
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          primarySwatch: Colors.blue,
+          indicatorColor: Colors.blueGrey,
+        ),
+        darkTheme: ThemeData.dark(),
+        themeMode: ThemeMode.dark,
+        debugShowCheckedModeBanner: false,
+        home: const HomeSrceen());
+  }
+}
+
+class HomeSrceen extends StatelessWidget {
+  const HomeSrceen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('home screen'),
       ),
-      darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.dark,
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+      body: Column(
+        children: [
+          TextButton(
+            onPressed: () async {
+              final result = await Authenticator().loginWithFacebook();
+              result.log();
+            },
+            child: const Text('login with Facebook'),
+          ),
+          TextButton(
+            onPressed: () async {
+              final result = await Authenticator().loginWithGoogle();
+              result.log();
+            },
+            child: const Text('login with Google'),
+          ),
+        ],
       ),
     );
   }

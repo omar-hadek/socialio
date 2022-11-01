@@ -8,7 +8,6 @@
     "*.flutter-plugins-dependencies.*": true,
     "*.git": true,
     "*.git.*": true,
-    "*.gitignore": true,
     "*.gitignore.*": true,
     "*.idea": true,
     "*.idea.*": true,
@@ -39,6 +38,7 @@
     "*web": true,
     "*web.*": true,
     "*windows": true,
-    "*windows.*": true
+    "*windows.*": true,
+    "lib\\firebase_options.dart": true
   }
 }
