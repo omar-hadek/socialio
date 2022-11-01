@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "287194699351",
+    "project_id": "socialio-55bad",
+    "storage_bucket": "socialio-55bad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287194699351:android:1416268d5e438720f43512",
+        "android_client_info": {
+          "package_name": "com.appscrew.socialio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287194699351-bmlhqmlaquuns3f3j1pkiagufnjfcrre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Uc3I414G_i7Rwozh-JOqQCHQOQWJ2jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287194699351-bmlhqmlaquuns3f3j1pkiagufnjfcrre.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "287194699351-94qoku85jhqdh701i53re80h7rsnrh12.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appscrew.socialio"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
