@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "287194699351-t5gm2hjspfsmvat09lvhia4ci2kld4me.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appscrew.socialio",
+            "certificate_hash": "660ed999e8e32ebb400200bf84bab4404d14b57c"
+          }
+        },
+        {
           "client_id": "287194699351-bmlhqmlaquuns3f3j1pkiagufnjfcrre.apps.googleusercontent.com",
           "client_type": 3
         }
