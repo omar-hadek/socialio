@@ -26,6 +26,7 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
   }
 
   Future<void> loginWithGoogle() async {
+    state = state.copiedWithIsLading(true);
     final result = await _authenticator.loginWithGoogle();
     final userId = _authenticator.userId;
     if (result == AuthResult.success && userId != null) {
@@ -40,6 +41,7 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
   }
 
   Future<void> loginWithFacebook() async {
+    state = state.copiedWithIsLading(true);
     final result = await _authenticator.loginWithGoogle();
     final userId = _authenticator.userId;
     if (result == AuthResult.success && userId != null) {
