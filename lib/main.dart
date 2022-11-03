@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:socialio/presentation/components/loading/loading_screen.dart';
 import 'package:socialio/presentation/login/auth_page.dart';
+import 'package:socialio/presentation/main/main_view.dart';
 import 'package:socialio/state/providers/is_loading_provider.dart';
 import '/firebase_options.dart';
 import 'dart:developer' as devtools show log;
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
           });
           final isLoggedId = ref.watch(isLoggedInProvider);
           if (isLoggedId) {
-            return const HomePage();
+            return const MainView();
           } else {
             return const AuthPage();
           }
