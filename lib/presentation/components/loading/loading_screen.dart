@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../../constants/strings.dart';
+import '../../components/constants/strings.dart';
 import 'loading_screen_controller.dart';
 
 class LoadingScreen {
