@@ -39,7 +39,7 @@ class ImageUploadNotifier extends StateNotifier<IsLoading> {
         // create a thumbnail out of the file
         final fileAsImage = img.decodeImage(file.readAsBytesSync());
         if (fileAsImage == null) {
-          isLoading = false;
+          isLoading = false;  
           return false;
         }
         // create thumbnail
@@ -87,7 +87,7 @@ class ImageUploadNotifier extends StateNotifier<IsLoading> {
         .child(userId)
         .child(fileType.collectionName)
         .child(fileName);
-
+ 
     try {
       // upload the thumbnail
       final thumbnailUploadTask =
