@@ -2,7 +2,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:socialio/state/auth/infra/authenticator.dart';
 import 'package:socialio/state/auth/models/auth_result.dart';
 import 'package:socialio/state/auth/models/auth_state.dart';
-import 'package:socialio/state/user_info/models/infra/user_info_storage.dart';
+import 'package:socialio/state/user_info/infra/user_info_storage.dart';
 
 import '../../posts/type_defs/user_id.dart';
 
