@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:socialio/presentation/components/post/post_thumbnail_view.dart';
+import 'package:socialio/presentation/components/post_comments/post_comments_view.dart';
 
 import '../../../state/posts/models/post.dart';
 
@@ -34,6 +35,12 @@ class PostsGridView extends StatelessWidget {
             //     ),
             //   ),
             // );
+
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) =>
+                        PostCommentsView(postId: post.postId))));
           },
         );
       },
