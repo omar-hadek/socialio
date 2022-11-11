@@ -21,8 +21,8 @@ class CompactCommentTile extends ConsumerWidget {
     return userInfo.when(
       data: (userInfo) {
         return RichTwoPartsText(
-          rightPart: userInfo.displayName,
-          leftPart: comment.comment,
+          rightPart: comment.comment,
+          leftPart: userInfo.displayName,
         );
       },
       error: (error, stackTrace) {

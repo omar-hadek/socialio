@@ -6,11 +6,9 @@ import 'package:socialio/state/constants/firebase_collection_name.dart';
 import 'package:socialio/state/constants/firebase_field_name.dart';
 
 import '../models/post.dart';
-import '../type_defs/search_tem.dart';
 
-final postsBySearchTermProvider =
-    StreamProvider.family.autoDispose<Iterable<Post>, SearchTerm>(
-  (ref, searchTerm) {
+final allPostsProvider = StreamProvider.autoDispose<Iterable<Post>>(
+  (ref) {
     final controller = StreamController<Iterable<Post>>();
 
     final sub = FirebaseFirestore.instance
@@ -20,11 +18,7 @@ final postsBySearchTermProvider =
         .listen((snapshot) {
       final posts = snapshot.docs.map((doc) {
         return Post(postId: doc.id, json: doc.data());
-      }).where(
-        (post) => post.message.toLowerCase().contains(
-              searchTerm.toLowerCase(),
-            ),
-      );
+      });
       controller.sink.add(posts);
     });
 

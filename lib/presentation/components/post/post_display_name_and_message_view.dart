@@ -24,8 +24,8 @@ class PostDisplayNameAndMessageView extends ConsumerWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: RichTwoPartsText(
-            rightPart: userInfoModel.displayName,
-            leftPart: post.message,
+            rightPart: post.message,
+            leftPart: userInfoModel.displayName,
           ),
         );
       },
