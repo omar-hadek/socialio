@@ -79,6 +79,7 @@ class PostCommentsView extends HookConsumerWidget {
                           request.value,
                         ),
                       );
+
                       return Future.delayed(
                         const Duration(
                           seconds: 1,

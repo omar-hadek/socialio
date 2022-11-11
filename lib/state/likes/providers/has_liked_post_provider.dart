@@ -33,6 +33,7 @@ final hasLikedPostProvider = StreamProvider.family.autoDispose<bool, PostId>(
     });
 
     ref.onDispose(() {
+      sub.cancel();
       controller.close();
     });
 
