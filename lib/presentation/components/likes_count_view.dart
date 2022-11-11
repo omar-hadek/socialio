@@ -21,7 +21,8 @@ class LikedCountView extends ConsumerWidget {
     return likesCount.when(data: (data) {
       final personOrPeople =
           likesCount.value == 1 ? Strings.person : Strings.people;
-      final likesText = '$likesCount $personOrPeople ${Strings.likedThis}';
+      final likesText =
+          '${likesCount.value} $personOrPeople ${Strings.likedThis}';
       return Text(likesText);
     }, error: (error, stackTrace) {
       return const SmallErrorAnimationView();

@@ -10,6 +10,7 @@ import '../../state/post_settings/providers/post_settings_provider.dart';
 import '../components/dialogs/logout_dialog.dart';
 import '../constants/strings.dart';
 import '../create_new_post/create_new_post_view.dart';
+import '../tabs/search/search_view.dart';
 import '../tabs/user_posts/user_posts_view.dart';
 
 class MainView extends ConsumerStatefulWidget {
@@ -128,7 +129,7 @@ class _MainViewState extends ConsumerState<MainView> {
         body: const TabBarView(
           children: [
             UserPostsView(),
-            // SearchView(),
+            SearchView(),
             // HomeView(),
           ],
         ),
