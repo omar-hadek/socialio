@@ -88,13 +88,11 @@ class LoginView extends ConsumerWidget {
     return Column(
       children: [
         TextButton(
-          onPressed:
-              ref.read(authStateNotifierProvider.notifier).loginWithFacebook,
+          onPressed: ref.read(authStateNotifierProvider.notifier).loginWithFacebook,
           child: const Text('login with Facebook'),
         ),
         TextButton(
-          onPressed:
-              ref.read(authStateNotifierProvider.notifier).loginWithGoogle,
+          onPressed: ref.read(authStateNotifierProvider.notifier).loginWithGoogle,
           child: const Text('login with Google'),
         ),
       ],

@@ -1,1 +1,7 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+<string name="facebook_app_id">528692072436983</string>
+<string name="fb_login_protocol_scheme">fb528692072436983</string>
+<string name="facebook_client_token">22e604bb31f9ad9a182f2aea59ca5c5f</string>
+<string name="app_name">socialio</string>
+</resource>
