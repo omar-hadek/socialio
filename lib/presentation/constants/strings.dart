@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 @immutable
 class Strings {
-  static const appName = 'Instant-gram!';
+  static const appName = 'Socialio';
   static const welcomeToAppName = 'Welcome to ${Strings.appName}';
   static const youHaveNoPosts =
       'You have not made a post yet. Press either the video-upload or the photo-upload buttons to the top of the screen in order to upload your first post!';
@@ -14,8 +14,7 @@ class Strings {
   static const facebookSignupUrl = 'https://www.facebook.com/signup';
   static const google = 'Google';
   static const googleSignupUrl = 'https://accounts.google.com/signup';
-  static const logIntoYourAccount =
-      'Log into your account using one of the options below.';
+  static const logIntoYourAccount = 'Log into your account using one of the options below.';
   static const comments = 'Comments';
   static const writeYourCommentHere = 'Write your comment here...';
   static const checkOutThisPost = 'Check out this post!';
